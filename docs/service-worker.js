@@ -1,4 +1,4 @@
-const timestamp = 1636239686890;
+const timestamp = 1636239918859;
 const build = [
   "/_app/start-4d5d3c4f.js",
   "/_app/assets/start-61d1577b.css",
@@ -17,6 +17,7 @@ const files = [
   "/.nojekyll",
   "/CHANGELOG.md",
   "/favicon.png",
+  "/logo_256.png",
   "/manifest.webmanifest",
   "/robots.txt",
   "/svelte-welcome.png",

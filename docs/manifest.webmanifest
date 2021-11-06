@@ -4,9 +4,9 @@
     "start_url": "https://sheepux.github.io",
     "icons": [
         {
-            "src": "favicon.png",
+            "src": "logo_256.png",
             "type": "image/png",
-            "sizes": "128x128"
+            "sizes": "256x256"
         }
     ],
     "background_color": "#3367D6",
