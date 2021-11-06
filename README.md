@@ -1,1 +1,3 @@
-# haruneko-pwa
+# Haruneko PWA 
+
+PWA svelte test
