@@ -1,4 +1,4 @@
-<script context="module">
+<script>
 	import { browser } from '$app/env';
 
 	export const router = browser;
@@ -9,6 +9,7 @@
 	// store a reference to our file handle
 	let dirHandle;
 	let folders = [];
+	let textcontent = '';
 
 	// https://expressflow.com/blog/posts/file-system-access-api-for-the-web-chrome
 	async function getFolder() {
@@ -25,7 +26,13 @@
 			});
 		}*/
 	}
-
+	async function readFile() {
+		const fileHandle = await dirHandle.getFileHandle('testPersist.txt');
+		// Simple access to the file's content. Nice!
+		const file = await fileHandle.getFile();
+		textcontent = await file.text();
+		console.log(textcontent);
+	}
 	async function dirty() {
 		//create a folder
 		const newDirHandle = await dirHandle.getDirectoryHandle('Folder by my PWA', { create: true });
@@ -50,22 +57,26 @@
 </script>
 
 <svelte:head>
-	<title>About</title>
+	<title>PWA_with_fs_access</title>
 </svelte:head>
 
 <div class="content">
 	<h1>Reading local folder</h1>
 	<button on:click={getFolder}>Load folder</button>
 	<button on:click={dirty}>Dirty</button>
-	<div>
-		<div id="list" style="width:50%">
+	<div style="padding-top:2em">
+		<div id="list" style="width:50%; float:left">
+			List :<br />
 			<ul>
 				{#each folders as folder}
 					<li>{folder.kind} -- {folder.name}</li>
 				{/each}
 			</ul>
 		</div>
-		<div id="file" style="width:50%">todo ...</div>
+		<div id="file" style="width:50%; float:left">
+			<button on:click={readFile}>Read testPersist.txt</button><br />
+			<textarea value={textcontent} placeholder="<nothing, write something by yourself>" />
+		</div>
 	</div>
 </div>
 

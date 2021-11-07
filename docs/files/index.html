@@ -7,27 +7,27 @@
 	<link rel="manifest" href="manifest.webmanifest">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<title>About</title>
+	<title>PWA_with_fs_access</title>
 
 		
 
-		<link rel="modulepreload" href="/_app/start-e7d0898f.js">
+		<link rel="modulepreload" href="/_app/start-b1bde137.js">
 		<link rel="modulepreload" href="/_app/chunks/vendor-03dbd443.js">
 		<link rel="modulepreload" href="/_app/pages/__layout.svelte-6238fdf2.js">
-		<link rel="modulepreload" href="/_app/pages/files.svelte-806525c1.js">
+		<link rel="modulepreload" href="/_app/pages/files.svelte-fd8b8af2.js">
 		<link rel="modulepreload" href="/_app/chunks/env-a13806e5.js">
 		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
 		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-1fda6867.css">
 		<link rel="stylesheet" href="/_app/assets/pages/files.svelte-7da30d25.css">
 
 		<script type="module">
-			import { start } from "/_app/start-e7d0898f.js";
+			import { start } from "/_app/start-b1bde137.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"","assets":""},
 				session: {},
 				host: location.host,
-				route: false,
+				route: true,
 				spa: false,
 				trailing_slash: "never",
 				hydrate: {
@@ -35,7 +35,7 @@
 					error: null,
 					nodes: [
 						import("/_app/pages/__layout.svelte-6238fdf2.js"),
-						import("/_app/pages/files.svelte-806525c1.js")
+						import("/_app/pages/files.svelte-fd8b8af2.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -73,8 +73,10 @@
 <div class="content svelte-cf77e8"><h1>Reading local folder</h1>
 	<button>Load folder</button>
 	<button>Dirty</button>
-	<div><div id="list" style="width:50%"><ul></ul></div>
-		<div id="file" style="width:50%">todo ...</div></div>
+	<div style="padding-top:2em"><div id="list" style="width:50%; float:left">List :<br>
+			<ul></ul></div>
+		<div id="file" style="width:50%; float:left"><button>Read testPersist.txt</button><br>
+			<textarea placeholder="<nothing, write something by yourself>"></textarea></div></div>
 </div></main>
 
 <footer class="svelte-1izrdc8"><p>visit <a href="https://kit.svelte.dev" class="svelte-1izrdc8">kit.svelte.dev</a> to learn SvelteKit</p>
