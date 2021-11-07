@@ -1,17 +1,19 @@
-const timestamp = 1636239918859;
+const timestamp = 1636244029909;
 const build = [
-  "/_app/start-4d5d3c4f.js",
+  "/_app/start-e7d0898f.js",
   "/_app/assets/start-61d1577b.css",
-  "/_app/pages/__layout.svelte-2cf340d6.js",
+  "/_app/pages/__layout.svelte-6238fdf2.js",
   "/_app/assets/pages/__layout.svelte-1fda6867.css",
-  "/_app/error.svelte-9465012a.js",
-  "/_app/pages/index.svelte-248b6073.js",
+  "/_app/error.svelte-506bd508.js",
+  "/_app/pages/index.svelte-613aafde.js",
   "/_app/assets/pages/index.svelte-c63fe1c6.css",
-  "/_app/pages/about.svelte-414dab21.js",
-  "/_app/assets/pages/about.svelte-bf4528fa.css",
-  "/_app/pages/todos/index.svelte-ba43e4c4.js",
+  "/_app/pages/about.svelte-90a08c9f.js",
+  "/_app/assets/pages/files.svelte-7da30d25.css",
+  "/_app/pages/files.svelte-806525c1.js",
+  "/_app/pages/todos/index.svelte-f05623c3.js",
   "/_app/assets/pages/todos/index.svelte-784042c1.css",
-  "/_app/chunks/vendor-836cc791.js"
+  "/_app/chunks/vendor-03dbd443.js",
+  "/_app/chunks/env-a13806e5.js"
 ];
 const files = [
   "/.nojekyll",
